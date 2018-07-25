@@ -8,7 +8,7 @@ exports.setup = function ({rpcAPI}) {
       (window.location.protocol === 'http:' && window.location.hostname === 'localhost')) {
     window.DatArchive = DatArchive.setup(rpcAPI)
   }
-  if (['beaker:', 'dat:'].includes(window.location.protocol)) {
+  if (['beaker:', 'dat:', 'intent:'].includes(window.location.protocol)) {
     window.beaker = beaker.setup(rpcAPI)
     window.experimental = experimental.setup(rpcAPI)
   }
